@@ -2,16 +2,23 @@ require 'spec_helper'
 
 describe "StaticPages" do
   describe "Home page" do    
-    it "should have the content 'Sample App'" do
+    it "should have the content 'Home'" do
       visit '/static_pages/home'
-      page.should have_content('Sample App')
+      page.should have_content('Home')
     end
   end
 
   describe "Help page" do    
-    it "should have the content 'Sample App'" do
+    it "should have the content 'Help'" do
       visit '/static_pages/help'
-      page.should have_content('Find')
+      page.should have_content('Help')
+    end
+  end
+
+  describe "Contact page" do
+    it "should have the content 'Contact'" do
+      visit '/static_pages/contact'
+      page.should have_content('Contact')
     end
   end
 end
